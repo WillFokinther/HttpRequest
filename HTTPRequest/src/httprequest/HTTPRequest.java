@@ -20,7 +20,8 @@ public class HTTPRequest {
         String line; 
         StringBuffer responseContent = new StringBuffer();
         String input;
-        input = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=501469064D126AD3431FF81012B1D9E5&steamid=76561198346396794&format=json";
+        input = " http://steamcommunity.com/inventory/76561198346396794/440/2?l=english&count=5000";
+        //
         
         try {
             URL url = new URL(input);
@@ -58,14 +59,6 @@ public class HTTPRequest {
             connection.disconnect();
             }
  
-    }
-    
-    public static String parse(String responseBody) {
-       JSONArray games = new JSONArray(responseBody); 
-       for (int i = 0; games.length(); i++) {
-           JSONObject thing = games.getJSONObject(i);
-           int appID = games.getInt(key "");
-       }
     }
            
 }
